@@ -7,6 +7,7 @@
        <Alert />
         <Profile />
         <ProfileHeader />
+        <img src="assets/favicon.ico" alt="">
     </div>
 </template>
 

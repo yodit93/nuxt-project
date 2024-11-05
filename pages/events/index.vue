@@ -1,5 +1,9 @@
 <script setup>
-
+   definePageMeta ({
+      
+      description: 'This is the events page',
+      layout: 'custom'
+   })
 </script>
 
 <template>
