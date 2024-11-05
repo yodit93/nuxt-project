@@ -4,9 +4,7 @@
 
 <template>
     <div>
-       <Alert />
-        <Profile />
-        <ProfileHeader />
+        This is alert component
     </div>
 </template>
 

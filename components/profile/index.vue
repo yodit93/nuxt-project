@@ -3,11 +3,7 @@
 </script>
 
 <template>
-    <div>
-       <Alert />
-        <Profile />
-        <ProfileHeader />
-    </div>
+    <div>profile component</div>
 </template>
 
 <style lang="postcss" scoped>
