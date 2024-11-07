@@ -1,12 +1,12 @@
 <template>
-    <div>
-        <header>
-            <NuxtLink to="/">Home</NuxtLink>
-            <NuxtLink to="/events">Events</NuxtLink>
-          </header>
-          <slot />
-          <footer>
-            <p>&copy; 2024</p>
-          </footer>
+    <div class="container">
+        <Sidebar />
+        <slot />
+          
     </div>
 </template>
+ <style lang="scss" scoped>   
+    .container {
+        display: flex;
+    }
+ </style>
