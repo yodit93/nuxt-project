@@ -1,5 +1,5 @@
 <script setup>
-
+    const { inboxEmails, archivedEmails } = useEmailStore();
 </script>
 
 <template>
@@ -12,14 +12,14 @@
                         <img src="/inbox-01.png" alt="inbox">
                         <nuxt-link to="/">Inbox</nuxt-link>
                     </div>
-                    <span>12</span>
+                    <span>{{ inboxEmails.length }}</span>
                 </li>
                 <li class="sidebar__list">
                     <div>
                         <img src="/archive.png" alt="archive">
                         <nuxt-link to="/archive">Archive</nuxt-link>
                     </div>
-                    <span>8</span>
+                    <span>{{ archivedEmails.length }}</span>
                 </li>
             </ul>
             <button class="sidebar__logout-btn">
