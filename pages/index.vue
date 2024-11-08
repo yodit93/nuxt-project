@@ -1,5 +1,29 @@
 <script setup>
-    const { inboxEmails, moveToArchive } = useEmailStore();
+    const { 
+        inboxEmails, 
+        moveToArchive, 
+        selectedEmails, 
+        selectAllEmails, 
+        isEmailSelected
+    } = useEmailStore();
+
+    const areAllSelected = computed( () => selectedEmails.value.length === inboxEmails.value.length && inboxEmails.value.length > 0);
+    
+    const controlArchive = () => {
+        selectedEmails.value.forEach(email => {
+            moveToArchive(email);
+        });
+        selectedEmails.value = [];
+    };
+
+    const markAsRead = () => {
+        selectedEmails.value.forEach(email => {
+            email.isRead = true;
+        });
+        selectedEmails.value = [];
+    };
+
+    
 </script>
 
 <template>
@@ -7,30 +31,30 @@
         <h2>Inbox</h2>
         <header class="email-page__header">
            <div class="email-page__header--selection">
-            <input type="checkbox">
-            <p>Email Selected</p>
+            <input type="checkbox" @change="e => selectAllEmails(e, inboxEmails)" :checked="areAllSelected">
+            <p>Email Selected ({{ selectedEmails.length }})</p>
            </div>
-           <div class="email-page__header--actions">
-            <button class="email-page__mark-read">
+           <div class="email-page__header--actions" v-if="isEmailSelected">
+            <button class="email-page__mark-read" @click="markAsRead">
                 <img src="/mail-04.png" alt="mail">
                 <span>Mark as Read</span>
             </button>
-            <button class="email-page__archive">
+            <button class="email-page__archive" @click="controlArchive">
                 <img src="/trash-01.png" alt="trash">
                 <span>Archive</span>
             </button>
            </div>
         </header>
         <ul>
-            <li v-for="email in inboxEmails" :key="email.title" @click="moveToArchive">
-                <input type="checkbox">
-                <p>{{ email.title }}</p>
+            <li v-for="email in inboxEmails" :key="email.title">
+                <input type="checkbox" :value="email" v-model="selectedEmails">
+                <p :class="{ 'read' : email.isRead }">{{ email.title }}</p>
             </li>
         </ul>
     </section>
 </template>
 
-<style lang="scss" scoped>
+<style lang="scss">
     .email-page {
         padding: 24px;
 
@@ -95,6 +119,10 @@
             width: 20px;
             height: 20px;
             border-radius: 5px;
+        }
+
+        .read {
+            opacity: 0.5;
         }
         
     }
