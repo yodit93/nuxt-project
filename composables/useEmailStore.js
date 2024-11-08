@@ -60,9 +60,26 @@ const inboxEmails = ref([
 
 const archivedEmails = ref([]);
 
+const moveToArchive = (email) => {
+    archivedEmails.value.push(email);
+    inboxEmails.value = inboxEmails.value.filter(e => e.id !== email.id);
+};
+
+const selectedEmails = ref([]);
+
+const selectAllEmails = (e, emails) => {
+    selectedEmails.value = e.target.checked ? [...emails] : [];      
+};
+
+const isEmailSelected = computed(() => selectedEmails.value.length > 0);
+
 export function useEmailStore() {
     return {
         inboxEmails,
-        archivedEmails
+        archivedEmails,
+        moveToArchive,
+        selectedEmails,
+        selectAllEmails,
+        isEmailSelected
     }
 };
