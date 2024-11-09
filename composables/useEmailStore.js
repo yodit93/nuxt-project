@@ -71,7 +71,30 @@ const selectAllEmails = (e, emails) => {
     selectedEmails.value = e.target.checked ? [...emails] : [];      
 };
 
+const archiveFromDetails = () => {
+    moveToArchive(selectedEmails.value[0]);
+    isEmailOpened.value = false;
+    selectedEmails.value = [];
+};
+
+const markFromDetails = () => {
+    selectedEmails.value[0].isRead = true;
+    isEmailOpened.value = false;
+    selectedEmails.value = [];
+};
+
+const openDetails = (email) => {
+    selectedEmails.value = [email];
+    isEmailOpened.value = true;
+};
+
+const closeDetails = () => {
+    isEmailOpened.value = false;
+    selectedEmails.value = [];
+};
+
 const isEmailSelected = computed(() => selectedEmails.value.length > 0);
+const isEmailOpened = ref(false);
 
 export function useEmailStore() {
     return {
@@ -80,6 +103,11 @@ export function useEmailStore() {
         moveToArchive,
         selectedEmails,
         selectAllEmails,
-        isEmailSelected
+        isEmailSelected,
+        isEmailOpened,
+        openDetails,
+        closeDetails,
+        archiveFromDetails,
+        markFromDetails
     }
 };
