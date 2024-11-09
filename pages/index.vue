@@ -4,25 +4,26 @@
         moveToArchive, 
         selectedEmails, 
         selectAllEmails, 
-        isEmailSelected
+        isEmailSelected,
+        isEmailOpened,
+        openDetails
     } = useEmailStore();
 
     const areAllSelected = computed( () => selectedEmails.value.length === inboxEmails.value.length && inboxEmails.value.length > 0);
     
-    const controlArchive = () => {
-        selectedEmails.value.forEach(email => {
-            moveToArchive(email);
-        });
-        selectedEmails.value = [];
-    };
-
     const markAsRead = () => {
         selectedEmails.value.forEach(email => {
             email.isRead = true;
         });
         selectedEmails.value = [];
     };
-
+    const controlArchive = () => {
+        selectedEmails.value.forEach(email => {
+            moveToArchive(email);
+        });
+        selectedEmails.value = [];
+    };
+    
     
 </script>
 
@@ -48,9 +49,10 @@
         <ul>
             <li v-for="email in inboxEmails" :key="email.title">
                 <input type="checkbox" :value="email" v-model="selectedEmails">
-                <p :class="{ 'read' : email.isRead }">{{ email.title }}</p>
+                <p :class="{ 'read' : email.isRead }" @click="openDetails(email)">{{ email.title }}</p>
             </li>
         </ul>
+        <EmailDetails v-if="isEmailOpened"/>
     </section>
 </template>
 
@@ -113,6 +115,7 @@
             gap: 12px;
             font-size: 14px;
             font-weight: 500;
+            cursor: pointer;
         }
 
         input {
