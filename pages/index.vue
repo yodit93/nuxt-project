@@ -58,20 +58,23 @@
 
 <style lang="scss">
     .email-page {
-        padding: 24px;
+        width: calc(100% - 260px);
+        height: 100vh;
+        overflow-y: auto;
+        padding: 0 20px 0 0;
 
         h2 {
             font-size: 32px;
             font-weight: 500;
             color: #121829;
-            margin-bottom: 32px;
+            margin: 20px 0 32px 20px;
         }
 
         &__header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 24px;
+            margin: 0 0 24px 20px;
 
             &--selection {
                 display: flex;
@@ -111,11 +114,15 @@
         li {
             display: flex;
             align-items: center;
-            padding: 21px 0;
+            padding: 21px 20px 21px;
             gap: 12px;
             font-size: 14px;
             font-weight: 500;
             cursor: pointer;
+
+            &:hover {
+                background-color: rgba(209, 226, 255, 1);
+            }
         }
 
         input {
@@ -126,7 +133,6 @@
 
         .read {
             opacity: 0.5;
-        }
-        
+        }      
     }
 </style>

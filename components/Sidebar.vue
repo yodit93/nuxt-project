@@ -7,20 +7,24 @@
         <img src="/public/Logo.png" class="sidebar__logo" alt="logo">
         <nav class="sidebar__nav">
             <ul class="sidebar__list-cont">
-                <li class="sidebar__list">
-                    <div>
-                        <img src="/inbox-01.png" alt="inbox">
-                        <nuxt-link to="/">Inbox</nuxt-link>
-                    </div>
-                    <span>{{ inboxEmails.length }}</span>
-                </li>
-                <li class="sidebar__list">
-                    <div>
-                        <img src="/archive.png" alt="archive">
-                        <nuxt-link to="/archive">Archive</nuxt-link>
-                    </div>
-                    <span>{{ archivedEmails.length }}</span>
-                </li>
+                <nuxt-link to="/">
+                    <li class="sidebar__list">
+                        <div>
+                            <img src="/inbox-01.png" alt="inbox">
+                            <span>Inbox</span>
+                        </div>
+                        <span>{{ inboxEmails.length }}</span>
+                    </li>
+                </nuxt-link>
+                <nuxt-link to="/archive">
+                    <li class="sidebar__list">
+                        <div>
+                            <img src="/archive.png" alt="archive">
+                            <span>Archive</span>
+                        </div>
+                        <span>{{ archivedEmails.length }}</span>
+                    </li>
+                </nuxt-link>
             </ul>
             <button class="sidebar__logout-btn">
                 <img src="/log-out-04.png" alt="logout">
@@ -55,6 +59,12 @@
             display: flex;
             flex-direction: column;
             gap: 12px;
+
+            a {
+                text-decoration: none;
+                color: #4B5563;
+                font-size: 16px;
+            }
         }
         &__list {
             list-style: none;
@@ -67,8 +77,11 @@
             cursor: pointer;
 
             &:hover {
-               background-color: #D6E2FB; 
-               color: #121829;
+               background-color: #D6E2FB;
+
+                span {
+                     color: #121829;
+                }
             }
 
             div {
@@ -80,12 +93,6 @@
             img {
                 width: 24px;
                 height: 24px;
-            }
-
-            a {
-                text-decoration: none;
-                color: #4B5563;
-                font-size: 16px;
             }
 
             span {
@@ -100,7 +107,7 @@
             align-items: center;
             gap: 12px;
             justify-content: flex-start;
-            margin-left: 24px;
+            margin: 0 0 32px 24px;
             font-size: 16px;
 
             img {
