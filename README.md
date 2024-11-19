@@ -32,36 +32,32 @@ Nuxt email is a project done as part of Inisev Frontend developer job applicatio
 <details>
   <summary>Client</summary>
   <ul>
-    <li><a href="https://reactjs.org/">HTML</a></li>
+    <li><a href="https://nuxt.com/docs/getting-started/introduction">Nuxt</a></li>
   </ul>
 </details>
 
 <details>
   <summary>Styling</summary>
   <ul>
-    <li><a href="https://expressjs.com/">CSS</a></li>
-  </ul>
-</details>
-<details>
-  <summary>React</summary>
-  <ul>
-    <li><a href="https://expressjs.com/">CSS</a></li>
-  </ul>
-</details>
-<details>
-  <summary>Functionality</summary>
-  <ul>
-    <li><a href="https://expressjs.com/">CSS</a></li>
+    <li><a href="">SCSS</a></li>
   </ul>
 </details>
 
 ## Key features
 
+users can access their emails,
+users can archive and mark the email as read,
+users can get archived emails and delete each,
+users can see the details about the received email,
+users can see the number of inboxed and archived emails from the sidebar,
+users can select individual or multiple emails
+
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- LIVE DEMO -->
 
-## 🚀 Live Demo <a name="live-demo"></a>
+## 🚀 Live Demo <a href="https://nuxt-project.tiiny.site/" name="live-demo"></a>
 
 > Link to deployed project
 
@@ -77,101 +73,9 @@ In order to run this project you need:
 - Node
 <!--
 
-### Setup
+## Setup
 
 Clone this repository to your desired folder:
-<
-
-
-### Install
-
-Install this project with
-
-
-
-### Run tests
-
-To run tests, run the following command:
-
-### Usage 
- To run the project, execute the following command:
-
-```sh
-    npm start
-```
-
-
-
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- AUTHORS -->
-
-## 👥 Author
-👤 **Yodit**
-
-- GitHub: [@githubhandle](https://github.com/yodit93)
-
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/yodit-abebe-ayalew/)
-
-
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- FUTURE FEATURES -->
-
-## 🔭 Future Features <a name="future-features"></a>
-
-> 
-
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- CONTRIBUTING -->
-
-## 🤝 Contributing <a name="contributing"></a>
-
-Contributions, issues, and feature requests are welcome!
-
-Feel free to check the [issues page](../../issues/).
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- SUPPORT -->
-
-## ⭐️ Show your support <a name="support"></a>
-
-If you like this project... Kindly leave a star ⭐
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- ACKNOWLEDGEMENTS -->
-
-## 🙏 Acknowledgments <a name="acknowledgements"></a>
-
-
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-<!-- LICENSE -->
-
-## 📝 License <a name="license"></a>
-
-This project is [MIT](./LICENSE) licensed.
-
-
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-
-
-
-# Nuxt Minimal Starter
-
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
-
-## Setup
 
 Make sure to install dependencies:
 
@@ -239,6 +143,64 @@ yarn preview
 
 # bun
 bun run preview
-```
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- AUTHORS -->
+
+## 👥 Author
+👤 **Yodit**
+
+- GitHub: [@githubhandle](https://github.com/yodit93)
+
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/yodit-abebe-ayalew/)
+
+
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- FUTURE FEATURES -->
+
+## 🔭 Future Features <a name="future-features"></a>
+
+> Implement all the Gmail functionality
+
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- CONTRIBUTING -->
+
+## 🤝 Contributing <a name="contributing"></a>
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](../../issues/).
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- SUPPORT -->
+
+## ⭐️ Show your support <a name="support"></a>
+
+If you like this project... Kindly leave a star ⭐
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- ACKNOWLEDGEMENTS -->
+
+## 🙏 Acknowledgments <a name="acknowledgements"></a>
+
+
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<!-- LICENSE -->
+
+## 📝 License <a name="license"></a>
+
+This project is [MIT](./LICENSE) licensed.
+
+
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
