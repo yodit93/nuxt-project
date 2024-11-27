@@ -57,7 +57,7 @@ users can select individual or multiple emails
 
 <!-- LIVE DEMO -->
 
-## 🚀 Live Demo <a href="https://nuxt-project.tiiny.site/" name="live-demo"></a>
+## 🚀 Live Demo <a href="https://nuxt-project.tiiny.site/" name="live-demo">Live Demo</a>
 
 > Link to deployed project
 
